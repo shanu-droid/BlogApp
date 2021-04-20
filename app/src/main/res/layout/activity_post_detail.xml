@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_google_signin_btn_text_dark_focused"
+    tools:context=".Activites.PostDetailActivity"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_comment"
+            android:layout_width="351dp"
+            android:layout_height="109dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/post_detail_comment" />
+
+        <TextView
+            android:id="@+id/post_detail_desc"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="12dp"
+            android:lineSpacingExtra="8dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:text='This article is about the 1997 Italian film. For other uses, see Life Is Beautiful (disambiguation). "La vita è bella" redirects here. For other uses, see La vita è bella (disambiguation).'
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/post_detail_date_name" />
+
+        <TextView
+            android:id="@+id/post_detail_date_name"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:layout_marginTop="12dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:text="11 Aug 2020 |  Madhira Shetty"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view" />
+
+        <View
+            android:id="@+id/view"
+            android:background="#2e2e2e"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/post_detail_title" />
+
+        <TextView
+            android:id="@+id/post_detail_title"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:lineSpacingExtra="4dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:text="TextView"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/post_detail_image" />
+
+        <ImageView
+            android:id="@+id/post_detail_image"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_launcher_background" />
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/post_detail_currentuser"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="6dp"
+            app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+            app:layout_constraintEnd_toStartOf="@+id/post_detail_comment"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/post_detail_desc"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <EditText
+            android:id="@+id/post_detail_comment"
+            android:layout_width="240dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="180dp"
+            android:background="@drawable/reg_edittext_style"
+            android:ems="10"
+            android:hint="Write Comment"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            app:layout_constraintEnd_toStartOf="@+id/post_detail_add_button"
+            app:layout_constraintStart_toEndOf="@+id/post_detail_currentuser"
+            app:layout_constraintTop_toTopOf="@+id/post_detail_title" />
+
+        <Button
+            android:id="@+id/post_detail_add_button"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/edittext_button_style_rounded"
+            android:text="ADD"
+            app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/post_detail_comment"
+            app:layout_constraintTop_toBottomOf="@+id/post_detail_desc" />
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/post_detail_user_img"
+            android:layout_width="46dp"
+            android:layout_height="33dp"
+            android:layout_marginBottom="3dp"
+            app:layout_constraintBottom_toBottomOf="@+id/post_detail_date_name"
+            app:layout_constraintEnd_toEndOf="@+id/post_detail_date_name"
+            app:layout_constraintHorizontal_bias="0.957"
+            app:layout_constraintStart_toStartOf="@+id/post_detail_date_name"
+            app:layout_constraintTop_toTopOf="@+id/post_detail_date_name"
+            app:layout_constraintVertical_bias="0.0"
+            tools:srcCompat="@tools:sample/avatars" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
